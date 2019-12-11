@@ -5,6 +5,10 @@ export default class Footer extends Component{
         super();
     }
     render(){
-        return <div>Footer</div>
+        return (
+            <div style={styles.footerContainer}>
+                Copyrights, GetSetGo. All rights reserved.                
+            </div>
+        )
     }
 }
