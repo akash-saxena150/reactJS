@@ -1,6 +1,15 @@
 import React from 'react';
-function BigHeading(props){
-    console.log(props);
-    return <h1 style={{fontSize: '2rem'}}>{props.children}</h1>
+const color = {
+    primary: 'black',
+    secondary: 'green'
 }
-export {BigHeading}
+function BigHeading(props){
+    return <h1 style={{fontSize: '2rem', color: props.color?color[props.color]:color['primary']}}>{props.children}</h1>
+}
+function SmHeading(props){
+    return <h3 style={{fontSize: '1.3rem', color: props.color?color[props.color]:color['primary']}}>{props.children}</h3>
+}
+function RegularTxt(props){
+    return <p>{props.children}</p>
+}
+export {BigHeading, RegularTxt, SmHeading}
